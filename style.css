@@ -1,0 +1,265 @@
+/* ===============================
+   Global Variables
+   =============================== */
+:root {
+  --color-bg: #000000;
+  --color-card: #111111;
+  --color-heading: #ffffff;
+  --color-text: #cccccc;
+  --color-label: #ffffff;
+  --color-border: #ffffff;
+  --color-blue: #007BFF;
+}
+
+/* ===============================
+   Reset
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ===============================
+   Typography
+   =============================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+label {
+  color: var(--color-label);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ===============================
+   Navigation Bar
+   =============================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-bg);
+  padding: 15px;
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: var(--color-heading);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-blue);
+}
+
+/* ===============================
+   Hero Section
+   =============================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 100px 50px 50px;
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-left h1 {
+  font-size: 2.5em;
+}
+
+.hero-left p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+.btn-primary {
+  background-color: var(--color-blue);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid var(--color-blue);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-blue);
+  color: #ffffff;
+}
+
+/* ===============================
+   Cards
+   =============================== */
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* ===============================
+   Forms
+   =============================== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background-color: var(--color-bg);
+  color: #ffffff;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #888888;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--color-blue);
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  color: var(--color-label);
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   Grid Layouts
+   =============================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer p {
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+
+.footer .social-icons span,
+.footer .social-icons a {
+  margin: 0 10px;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #0056b3;
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero-left {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}

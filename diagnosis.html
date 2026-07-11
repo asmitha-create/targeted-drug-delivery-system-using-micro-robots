@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnosis - AI-Based Micro Robot Treatment Recommendation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="diagnosis.html">Diagnosis</a></li>
+      <li><a href="robots.html">Micro Robots</a></li>
+      <li><a href="diseases.html">Disease Database</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Diagnosis Form Section -->
+  <section class="diagnosis">
+    <h2>Patient Diagnosis Form</h2>
+    <div class="card">
+      <form id="diagnosisForm">
+        <label for="name">Patient Name</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <label for="factor">Disease Causing Factor (Optional)</label>
+        <input type="text" id="factor">
+
+        <label for="bodypart">Affected Body Part</label>
+        <select id="bodypart">
+          <option>Head</option>
+          <option>Chest</option>
+          <option>Stomach</option>
+          <option>Skin</option>
+        </select>
+
+        <label for="days">Number of Days Affected</label>
+        <input type="number" id="days">
+
+        <label>Symptoms</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="fever"> Fever</label>
+          <label><input type="checkbox" value="headache"> Headache</label>
+          <label><input type="checkbox" value="fatigue"> Fatigue</label>
+          <label><input type="checkbox" value="rash"> Rash</label>
+          <label><input type="checkbox" value="joint pain"> Joint Pain</label>
+          <label><input type="checkbox" value="chills"> Chills</label>
+          <label><input type="checkbox" value="sweating"> Sweating</label>
+          <label><input type="checkbox" value="weight loss"> Weight Loss</label>
+        </div>
+
+        <label for="temp">Temperature (Optional)</label>
+        <input type="text" id="temp">
+
+        <label for="bp">Blood Pressure (Optional)</label>
+        <input type="text" id="bp">
+
+        <button type="submit" class="btn-primary">Analyze Disease</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 AI-Based Micro Robot Treatment Recommendation System</p>
+    <p>Contact: ai.medical@project.com</p>
+    <div class="social-icons">
+      <span>🌐</span> <span>📧</span> <span>💙</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
